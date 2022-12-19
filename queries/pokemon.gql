@@ -1,0 +1,8 @@
+query pokemon_v2_pokemon_by_pk ($id: Int!) {
+  pokemon_v2_pokemon_by_pk(id: $id) {
+    id
+    name
+    height
+    weight
+  }
+}
