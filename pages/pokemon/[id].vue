@@ -11,7 +11,11 @@
 const route = useRoute()
 const GqlInstance = useGql()
 
-const data = await GqlInstance('pokemon_v2_pokemon_by_pk', { id: route.params.id })
-const pokemon = data?.pokemon_v2_pokemon_by_pk
+const operation = 'pokemon_v2_pokemon_by_pk'
+const variables = {
+  id: route.params.id
+}
+const key = hash({operation, variables})
+const data = await useAsyncData(key, () => GqlInstance(operation, variables))
 
 </script>
