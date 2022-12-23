@@ -8,6 +8,8 @@
 </template>
 
 <script lang="ts" setup>
+import { hash } from "ohash";
+
 const route = useRoute()
 const GqlInstance = useGql()
 

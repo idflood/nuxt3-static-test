@@ -14,6 +14,7 @@
 
 <script lang="ts" setup>
 import { hash } from "ohash";
+
 const GqlInstance = useGql()
 
 const operation = 'pokemon_v2_pokemon'
