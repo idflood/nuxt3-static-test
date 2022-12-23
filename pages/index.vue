@@ -13,9 +13,10 @@
 </template>
 
 <script lang="ts" setup>
-const { data, error } = await useAsyncGql({
-  operation: 'pokemon_v2_pokemon',
-  variables: { limit: 20, offset: 0 },
-})
+const GqlInstance = useGql()
 
+const data = await GqlInstance('pokemon_v2_pokemon', {
+  limit: 20,
+  offset: 0
+})
 </script>
