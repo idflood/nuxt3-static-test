@@ -13,10 +13,16 @@
 </template>
 
 <script lang="ts" setup>
+import { hash } from "ohash";
+
 const GqlInstance = useGql()
 
-const data = await GqlInstance('pokemon_v2_pokemon', {
+const operation = 'pokemon_v2_pokemon'
+const variables = {
   limit: 20,
   offset: 0
-})
+}
+const key = hash({operation, variables})
+
+const {data, error} = await useAsyncData(key, () => GqlInstance(operation, variables))
 </script>
