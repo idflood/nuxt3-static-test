@@ -11,6 +11,7 @@
     "nuxt": "3.0.0"
   },
   "dependencies": {
-    "nuxt-graphql-client": "^0.2.23"
+    "nuxt-graphql-client": "^0.2.23",
+    "ohash": "^1.0.0"
   }
 }
