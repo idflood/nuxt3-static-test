@@ -18,6 +18,6 @@ const variables = {
   id: route.params.id
 }
 const key = hash({operation, variables})
-const data = await useAsyncData(key, () => GqlInstance(operation, variables))
+const {data} = await useAsyncData(key, () => GqlInstance(operation, variables))
 
 </script>
