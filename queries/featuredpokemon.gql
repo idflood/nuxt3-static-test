@@ -1,0 +1,8 @@
+query featuredpokemon {
+  pokemon_v2_pokemon_by_pk(id: 42) {
+    id
+    name
+    height
+    weight
+  }
+}
