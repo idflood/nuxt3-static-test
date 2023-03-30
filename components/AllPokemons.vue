@@ -4,7 +4,7 @@
     <p>Fetched {{ data?.pokemon_v2_pokemon?.length || 0 }} pokemons</p>
 
     <div v-for="(entry, i) of data?.pokemon_v2_pokemon" :key="entry.id">
-        <h3><NuxtLink :to="`/pokemon/${entry.id}`">{{ entry.name }}</NuxtLink></h3>
+        <h3><NuxtLink :to="`/pokemon/${entry.id}/`">{{ entry.name }}</NuxtLink></h3>
         <div>{{ entry.height }}</div>
         <div>{{ entry.weight }}</div>
     </div>
