@@ -19,7 +19,7 @@ const GqlInstance = useGql()
 
 const operation = 'pokemon_v2_pokemon'
 const variables = {
-  limit: 20,
+  limit: 5,
   offset: 0
 }
 const key = hash({operation, variables})
